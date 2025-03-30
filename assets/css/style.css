@@ -85,7 +85,7 @@ span {
   display: grid;
   height: 20rem;
   width: 450vw;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(11, minmax(0, 1fr));
   gap: 0.25rem;
   flex-shrink: 0;
 }
