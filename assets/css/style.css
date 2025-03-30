@@ -77,15 +77,17 @@ span {
 
 .marquee-container {
   width: 100%;
-  animation: marquee 20s linear infinite;
+  display: flex;
+  animation: marquee 25s linear infinite;
 }
 
 .image-grid {
   display: grid;
-  height: 20rem;
-  width: 600vw;
-  grid-template-columns: repeat(14, minmax(0, 1fr));
+  height: 30rem;
+  width: 450vw;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 0.25rem;
+  flex-shrink: 0;
 }
 
 img {
@@ -104,17 +106,20 @@ img {
 
 @media (min-width: 640px) {
   .marquee-container {
-    animation-duration: 15s;
+    animation-duration: 25s;
   }
   .image-grid {
-    height: 20rem;
+    height: 40rem;
     width: 300vw;
   }
 }
 
 @media (min-width: 1280px) {
   .marquee-container {
-    animation-duration: 35s;
+    animation-duration: 15s;
+  }
+  .image-grid {
+    height: 45rem;
   }
 }
 
@@ -126,10 +131,10 @@ img {
 }
 
 @keyframes marquee {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(calc(-100% - 0.25rem)); /* ajustement pour le gap */
   }
 }
