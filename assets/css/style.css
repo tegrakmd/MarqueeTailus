@@ -83,7 +83,7 @@ span {
 
 .image-grid {
   display: grid;
-  height: 30rem;
+  height: 20rem;
   width: 450vw;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 0.25rem;
@@ -106,7 +106,7 @@ img {
 
 @media (min-width: 640px) {
   .marquee-container {
-    animation-duration: 25s;
+    animation-duration: 20s;
   }
   .image-grid {
     height: 40rem;
