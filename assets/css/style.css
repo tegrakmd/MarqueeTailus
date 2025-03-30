@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  background-color: #fff;
+  font-family: Inter;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: Poppins;
+}
+.section_hero {
+  padding: 2rem;
+}
+.hero_container {
+  height: 30dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-end;
+}
+.hero_avatar {
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mask-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.top-overlay,
+.bottom-overlay {
+  position: absolute;
+  left: -0.25rem;
+  right: -0.25rem;
+  z-index: 10;
+  height: 50%;
+  background: white;
+  border-radius: 100%;
+  transform: scaleX(1.25) scaleY(0.75);
+}
+
+.top-overlay {
+  top: -30.5%;
+}
+
+.bottom-overlay {
+  bottom: -30.5%;
+}
+
+.marquee-container {
+  width: 100%;
+  animation: marquee 20s linear infinite;
+}
+
+.image-grid {
+  display: grid;
+  height: 20rem;
+  width: 600vw;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.position-top {
+  object-position: top;
+}
+
+@media (min-width: 640px) {
+  .marquee-container {
+    animation-duration: 15s;
+  }
+  .image-grid {
+    height: 20rem;
+    width: 300vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .marquee-container {
+    animation-duration: 35s;
+  }
+  .container {
+    height: 50dvh;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1536px) {
+  .top-overlay,
+  .bottom-overlay {
+    transform: scaleX(1.25) scaleY(0.95);
+  }
+  .image-grid {
+    height: 60rem;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
