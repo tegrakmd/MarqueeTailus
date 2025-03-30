@@ -116,19 +116,12 @@ img {
   .marquee-container {
     animation-duration: 35s;
   }
-  .container {
-    height: 50dvh;
-    overflow: hidden;
-  }
 }
 
 @media (min-width: 1536px) {
   .top-overlay,
   .bottom-overlay {
     transform: scaleX(1.25) scaleY(0.95);
-  }
-  .image-grid {
-    height: 60rem;
   }
 }
 
